@@ -1,0 +1,10 @@
+#! /bin/bash
+echo "provide any word to reverse it:"
+read wrd
+echo $wrd
+i=$(echo $wrd | wc -c)
+while [ $i -ge 1 ]
+do
+echo ${wrd:$i:1} | tr -d '\n'
+i=$[$i-1]
+done
